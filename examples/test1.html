@@ -1,0 +1,53 @@
+<html>
+
+	<head>
+		<script src="./screen.js"></script>
+	</head>
+	<style>
+	body{ padding:0; margin:0; background:#cccccc; width:100%; height:100%; overflow:hidden; }
+
+	</style>
+		
+		<input type='number' value="8" min="8" id="hdl1" >
+		<center><canvas style="border:1px solid #cecece; margin:10px; cursor:cross;" width="480px" height="600px" id="screen"> </canvas></center>
+		<div class="showaddr" style="position:absolute; opacity:0.5; color:green; text-align:center; width:75px; height:auto; padding:2px; background:#fefefe;"></div>
+		
+
+<script>
+	/*
+	* declarz gui
+	*/
+	var monitor, gui = graphicalUserInterface( ( monitor = {
+	
+		width: 480, height:600,
+		monitor: document.getElementById('screen'),
+		modulo:8,
+		
+	} ) ).resetScreen( 0x000000 ).refresh( );
+	
+	// 
+	document.getElementById('hdl1').onchange = function( ){
+		gui.resetScreen( 0x000000 );
+		monitor.modulo =  parseInt( this.value );
+		test( );
+	};
+	
+	// use setRawPixel
+	// width * height * ( RGA size 4 bytes )
+ 	function test( ){
+		var i=0;
+		for(; i < (480*600)*4; i+=4 ){
+			(i%monitor.modulo) ?
+			gui.setRawPixel(
+				i,
+				0x555555
+			) : void 0;
+		}
+		gui.refresh( );
+	}
+
+	test( );
+
+</script>
+
+</html>
