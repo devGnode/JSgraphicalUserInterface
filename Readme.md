@@ -3,8 +3,9 @@
 
 ## examples
 
+ * [Examples]( http://devgnode.github.io/graphicalUserInterface/ )
   * [Rotation image](https://github.com/devGnode/Rotation-Image-Algo)
-  * [Examples]( http://devgnode.github.io/graphicalUserInterface/ )
+ 
 
 # :one: JSgraphicalUserInterface prototype
 
