@@ -139,6 +139,8 @@ parameters : callback
     
     JSON opts {
     mod:0 or 1 or 2
+    offsetTilesX : uint32 x,
+    offsetTilesY : uint32 y,
     
     mod:0,
     center: 1 or 0 
@@ -150,7 +152,7 @@ parameters : callback
     //
     buffer: Array[]
     
- }
+    }
 
 parameters : callback
 <br>@return void
