@@ -6,7 +6,7 @@
   * [Rotation image](https://github.com/devGnode/Rotation-Image-Algo)
   * ...
 
-# JSgraphicalUserInterface prototype
+# :one: JSgraphicalUserInterface prototype
 
 ```javascript
   var opts;
@@ -24,7 +24,7 @@
 
 **methods :**
 
-## .drawImage
+### .drawImage
 
 parameters : DOMImage node
 <br>@return void
@@ -51,7 +51,7 @@ parameters : uint x, uint y
   guid.resize( 320, 400 );
 ```
 
->###getRawPixel
+### .getRawPixel
 
 parameters : uint offset
 <br>@return **uint** colorRGB
@@ -85,7 +85,6 @@ parameters : uint x, uint y, uint color
   guid.setPixel( 1, 0, 16711680 ); // #ff0000 -> red -> 1671168
   ```
 
->
 ### .getLine
 
 parameters : uint y (, bool key  )
@@ -141,7 +140,10 @@ parameters : callback
   
   }); 
   ```
- ## Object tiles 
+ ## :two: .tiles 
+ 
+ @return **Object**
+ 
  ### .setTiles
  ### .setTilesByOffset
     
