@@ -133,7 +133,7 @@ parameters : callback
   
   }); 
   ```
- ### Object tiles 
+ ## Object tiles 
  ### .setTiles
  ### .setTilesByOffset
     
