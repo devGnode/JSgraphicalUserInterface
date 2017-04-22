@@ -1,4 +1,4 @@
-#graphicalUserInterface
+# graphicalUserInterface
 
 ```javascript
   var opts;
@@ -11,8 +11,8 @@
 ```
 **Global :**
 
->###uint screen_x 
->###uint screen_y
+>### uint screen_x 
+>### uint screen_y
 
 **methods :**
 
