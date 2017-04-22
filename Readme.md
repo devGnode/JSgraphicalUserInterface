@@ -1,8 +1,12 @@
-# example 
 
-> [Rotation image](https://github.com/devGnode/Rotation-Image-Algo)
+# graphicalUserInterface javascript :fr: 
 
-# graphicalUserInterface
+## examples
+
+  * [Rotation image](https://github.com/devGnode/Rotation-Image-Algo)
+  * ...
+
+# JSgraphicalUserInterface prototype
 
 ```javascript
   var opts;
