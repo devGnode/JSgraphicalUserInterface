@@ -1,0 +1,63 @@
+<html>
+
+	<head>
+		<script src="./screen.js"></script>
+	</head>
+	<style>
+	body{ padding:0; margin:0; background:#cccccc; width:100%; height:100%; overflow:hidden; }
+
+	</style>
+		
+		<input type='number' value="8" min="0" id="hdl1" >
+		<center><canvas style="border:1px solid #cecece; margin:10px; cursor:cross;" width="480px" height="600px" id="screen"> </canvas></center>
+
+<script>
+
+	var monitor, gui = graphicalUserInterface( ( monitor = {
+	
+		width: 480, height:600,
+		monitor: document.getElementById('screen'),
+		modulo:8,
+		
+	} ) ).resetScreen( 0x000000 ).refresh( );
+	
+	var img;
+
+	(img = (new Image( ) ) ).src="./test.jpg";
+	
+	img.onload = function(  ){
+	
+		gui.resize( 
+			img.width,
+			img.height
+		);
+		gui.drawImage( img );
+		test( );
+		gui.refresh( );
+	
+	};
+	
+	document.getElementById('hdl1').onchange = function( ){
+		gui.drawImage( img );
+		 this.value = monitor.modulo = ( monitor.modulo = parseInt( this.value ) );
+		test( );
+	};
+	
+	function test( ){
+		gui.each(function( addr ){
+		
+		!(addr%monitor.modulo) ?
+		this.setRawPixel(
+			addr*4 ,
+			0xffffff
+		) : void 0;
+		
+		}).refresh( );
+	}
+
+	test( );
+
+
+</script>
+
+</html>
