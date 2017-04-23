@@ -34,7 +34,7 @@ var graphicalUserInterface = function( setting, _self ){
 			
 			
 	["x","y"].map( function( val ){
-			self["screen_"+val ] = val == "x" ? screen_x : screen_y;
+			self["screen_"+val ] = val === "x" ? rawMonitor.width : rawMonitor.height;
  	});
 	self.drawImage = function( imgNode ){
 		ctxMonitor.drawImage( imgNode, 0,0 );
@@ -80,16 +80,27 @@ var graphicalUserInterface = function( setting, _self ){
 				base = ( addr + screen_x * 0x04 ),
 				colors = [], cnt = 0;
 				
+				if( color === undefined ){
+					console.log( color );
+					console.log( y );
+					return;
+				}
+				
 				try{
 					while( addr < base ){
 						val == "get" ? ( colors[ ( returnColorInt ? colors.length : addr/0x04 )] = self.getRawPixel( addr ) ) :
 							typeof color == "function" ? 
 							color.call( self, addr/0x04 ) : 
-							self.setRawPixel( addr, typeof color == "number" ? color : color[ returnColorInt ? (cnt++) : addr/0x04 ] );
-						
+							self.setRawPixel( addr, typeof color == "number" ?
+							color : 
+							color[ returnColorInt ? (cnt++) : addr/0x04 ] );
+						cnt++;
 						addr+= 0x04;
 					}
-				}catch( e ){ console.log( e ); };
+					
+				}catch( e ){ 
+				console.log(e);
+				};
 				
 		return ( val == "get" ? colors : 1 );
 		};
@@ -143,8 +154,8 @@ var graphicalUserInterface = function( setting, _self ){
 		var _self = this;
 	return {
 		
-		setLitesByOffset:function( offset, sprite, clr, bckg ){	
-		return this.setLites( 
+		setTilesByOffset:function( offset, sprite, clr, bckg ){	
+		return this.setTiles( 
 				parseInt( offset% ( _self.screen_x / opts.offsetTilesX ) ),
 				parseInt( offset/ ( _self.screen_x / opts.offsetTilesX ) ),
 				sprite,
@@ -152,7 +163,7 @@ var graphicalUserInterface = function( setting, _self ){
 				bckg
 			);
 		},
-		setLites:function( x, y, sprite, clr, bckg ){
+		setTiles:function( x, y, sprite, clr, bckg ){
 			var offsetX = x * ( opts.offsetTilesX || 1 ),
 				offsetY = y * ( opts.offsetTilesY || 1 ),
 				// center opts
@@ -175,8 +186,8 @@ var graphicalUserInterface = function( setting, _self ){
 							opts.palette[ sprite[i] ] :
 						// binary img
 						opts.mod === 2 ?
-							( sprite[ i ] === 1 ? clr : 
-							  sprite[ i ] === 0 && ( bckg || bckg >= 0 ) ? bckg : _self.getRawPixel( i ) ) 
+							( sprite[ i ] === 1 ? opts.palette[ clr ] : 
+							  sprite[ i ] === 0 && ( bckg || bckg >= 0 ) ? opts.palette[ bckg ] : _self.getRawPixel( i ) ) 
 							  : void 0
 					);
 				}		
