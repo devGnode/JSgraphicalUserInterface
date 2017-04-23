@@ -1,8 +1,12 @@
 //graphicalUserInterface
 /*
+*
+* https://github.com/devGnode/JSgraphicalUserInterface
+*
 * @LUpdate 17/04/2017
 * @VErsion 1.3
-* 
+* @licence AGPL-3.0
+*
 work arrond to canvas object
 setting
 	{
@@ -14,7 +18,6 @@ setting
 	 
 	 no facultif
 	 rgba: true, default 0xFF	
-	 buffer: [] //
 	
 	}
 */
