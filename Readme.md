@@ -1,8 +1,6 @@
 
 # graphicalUserInterface javascript :fr: 
 
-<img src="https://devgnode.github.io/graphicalUserInterface/cwgui.png">
-
 ## examples
 
  * [Examples]( http://devgnode.github.io/graphicalUserInterface/ )
@@ -218,6 +216,11 @@ guid.tiles({
     
   })( screen_x, screen_y, tile )
   
+ ```
+ 
+ <img src="https://devgnode.github.io/graphicalUserInterface/cwgui.png">
+ 
+```javascript 
   // mod 2
   // 9*8
  var tile = [
