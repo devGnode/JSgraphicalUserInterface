@@ -1,6 +1,8 @@
 
 # graphicalUserInterface javascript :fr: 
 
+<img src="https://devgnode.github.io/graphicalUserInterface/cwgui.png">
+
 ## examples
 
  * [Examples]( http://devgnode.github.io/graphicalUserInterface/ )
