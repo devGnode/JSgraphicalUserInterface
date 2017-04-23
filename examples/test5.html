@@ -20,6 +20,7 @@ var test = function( setting ){
 	
 		width: 480, height:600,
 		monitor: document.getElementById('screen'),
+		
 	} ) ), sp= gui.tiles({ 
 			
 			// mod 
@@ -91,10 +92,9 @@ return {
 		reset:function( mem ){
 			var x = y = 0;
 			try{
-			console.log( ( new Date() ).getTime( ) )
-			for(; y < monitor.lineMax; y++ ){
-				for( x= 0; x < monitor.charMax; x++ ){
-					
+			console.log( )
+			for(; y < parseInt( monitor.height / 6 ); y++ ){
+				for( x= 0; x < parseInt( monitor.width / 6 ); x++ ){
 					sp.setTiles( 
 						x, y,
 						sprites[ 
@@ -115,7 +115,7 @@ return {
 /**/ 
 var gm = test( );
 	gm.reset( );
-	
+
 	var i = 0;
 	setInterval( function( ){
 			
