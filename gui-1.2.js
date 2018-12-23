@@ -252,26 +252,6 @@ var graphicalUserInterface = function( setting, _self ){
 		this.refresh();
 	return this;
 	};
-	var  k=0;
-	self.test = function( x, y, a, r ){
-		var i=0;
-		var c =[0xff0000,0x00ff00,0x0000ff];
-		this.bind( x,y ,parseInt( x+r*Math.cos( Math.PI*a/180 ) ), parseInt( y+r*Math.sin( Math.PI*a/180 ) ), c[k] );
-		k = k+1>=3 ? 0 : k+1;
-	/*	while( i <= 360 ){
-			this.setPixel( parseInt( x+r*Math.cos( Math.PI*i/180 ) ), parseInt( y+r*Math.sin( Math.PI*i/180 ) ), 0x00ff00 );
-			//this.setPixel( parseInt( x+r*Math.cos( Math.PI*i/180 ) ), parseInt( y+r*Math.sin( Math.PI*i/180 ) )-1, 0x0000ff );
-			//a == i ?
-			//this.bind( x,y ,parseInt( x+r*Math.cos( Math.PI*i/180 ) ), parseInt( y+r*Math.sin( Math.PI*i/180 ) ), 0xff0000) : void 0;
-			this.bind( x,y ,parseInt( x+r*Math.cos( Math.PI*i/180 ) ), parseInt( y+r*Math.sin( Math.PI*i/180 ) ), 0xff0000);
-			//this.bind( x,y ,parseInt( x+r*Math.cos( Math.PI*i/180 ) ), parseInt( y+r*Math.sin( Math.PI*i/180 ) )-1, 0x00ff00);
-			//this.bind( x,y ,parseInt( x+r*Math.cos( Math.PI*i/180 ) ), parseInt( y+r*Math.sin( Math.PI*i/180 ) ), 0x0000ff);
-			//console.log(  parseInt( x+r*Math.cos( Math.PI*i/180 ) ), "/ sin /",  parseInt( x+r*Math.sin( Math.PI*i/180 ) ), " /i/ ", i );
-			i++;
-		}*/
-		
-		this.refresh( );
-	};
 	self.rot = function( hprop, x, y ){
 		var offsetX = x*1, // 1dot offset
 			offsetY = y*1, // 1dot offset
