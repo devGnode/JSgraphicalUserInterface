@@ -141,6 +141,38 @@ parameters : callback
   
   }); 
   ```
+ ## Bind Points ( Vertex )
+ 
+ ### .bind( *int* xa, *int* xb, *int* ya, *int* yb, *int32* color, *int8* opts )
+ 
+ ```javascript
+ gui.bind( 1, 1,  10, 1, 0x00ff00  )
+ 
+ ```
+ 
+ ### .cerc( *int* xa, *int* xb, *int* rayon, *int32* color )
+ 
+ ```javascript
+ gui.bind( 10, 50, 20, 0x00ff00  )
+```
+ ## Rotation
+ 
+ ```javascript
+  hprop = {
+   __code: *Array* binaryImage
+   angle: *int* angle,
+   x: *int* to
+   y: *int* to
+   overflow: *int32* colorDisplay 
+  }
+ ```
+ 
+ ### .rot( *JSON* hprop, *int* xFrom, *int* yFrom )
+ 
+ ```javascript
+ gui.rot( hprop, 20, 50  )
+```
+
  ## :two: .tiles 
  
  @return **Object**
