@@ -13,7 +13,7 @@ i gotta clean up the code before
 
 .medianFilter
 
-.nagaoFilter ( other median by sort )
+.nagaoFilter ( an other median filter by sort matrice )
 
 
 ## examples
