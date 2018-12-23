@@ -6,10 +6,14 @@
 i gotta clean up the code before
 
 .greyScaleFilter | 2,4,8,16,32,64 ... 128 bits
-.colorFilter | 3, 6, 24 bits 
+
+.colorFilter | 3, 6, 24 bits
+
 .YCrCbFilter
+
 .medianFilter
-.nagaoFilter
+
+.nagaoFilter ( other median by sort )
 
 
 ## examples
