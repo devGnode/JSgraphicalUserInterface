@@ -1,6 +1,17 @@
 
 # graphicalUserInterface javascript :fr: 
 
+## soon 
+
+i gotta clean up the code before
+
+.greyScaleFilter | 2,4,8,16,32,64 ... 128 bits
+.colorFilter | 3, 6, 24 bits 
+.YCrCbFilter
+.medianFilter
+.nagaoFilter
+
+
 ## examples
 
  * [Examples]( http://devgnode.github.io/graphicalUserInterface/ )
