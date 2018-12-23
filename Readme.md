@@ -7,6 +7,9 @@ i gotta clean up the code before
 
 .greyScaleFilter | 2,4,8,16,32,64 ... 128 bits
 
+### 2 bits grayscale ...
+<img src="https://zupimages.net/up/18/51/4y91.png">
+
 .colorFilter | 3, 6, 24 bits
 
 .YCrCbFilter
@@ -15,6 +18,9 @@ i gotta clean up the code before
 
 .nagaoFilter ( an other median filter by sort matrice )
 
+.graphColorFilter : Canvas Graphic color
+
+<img src="https://zupimages.net/up/18/51/ce54.png">
 
 ## examples
 
