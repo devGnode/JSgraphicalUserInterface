@@ -1,0 +1,7 @@
+
+#
+# xml file
+#
+*.xml
+
+/.idea
