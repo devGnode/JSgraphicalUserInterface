@@ -1,7 +1,7 @@
 
 # graphicalUserInterface javascript :fr: 
 
-## soon 
+## going soon
 
 i gotta clean up the code before
 
